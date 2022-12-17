@@ -1,7 +1,10 @@
 :root {
   --primary-color: #1d9bf0;
+  --primary-color2: #30a2ee;
   --primary-light-color: #e6f3fc;
   --gray-color: #eff3f4;
+  --color-gray2: #efefef;
+  --color-gray4: #d4d3d3;
   --font-size1: 2rem;
   --font-size2: 1.75rem;
   --font-size3: 1.5rem;
