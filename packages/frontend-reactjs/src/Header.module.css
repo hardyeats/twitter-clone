@@ -1,5 +1,6 @@
 header {
   font-size: var(--font-size1);
+  height: 100%;
 }
 
 ul.headerList {
