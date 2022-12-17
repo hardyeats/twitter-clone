@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/main.ts",
   "scripts": {
-    "start": "nodemon --exec \"ts-node --transpileOnly src/main.ts\" -e ts",
+    "start": "nodemon --exec \"ts-node src/main.ts\" -e ts|pino-pretty",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,10 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^4.7.1",
-    "fastify": "^4.10.2"
+    "fastify": "^4.10.2",
+    "fluent-json-schema": "^4.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
+    "pino-pretty": "^9.1.1",
     "prisma": "^4.7.1",
     "ts-node": "^10.9.1"
   }

@@ -9,6 +9,4 @@ server.get("/ping", async () => {
 server.register(routes);
 
 const port = Number(process.env.PORT) || 4000;
-server.listen({ port }, () => {
-  console.log(`Server running on port ${port}`);
-});
+server.listen({ port });

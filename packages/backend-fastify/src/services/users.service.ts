@@ -1,4 +1,4 @@
-class UsersService {
+export default class UsersService {
   private static instanse: UsersService;
   public static getInstance(): UsersService {
     if (!UsersService.instanse) {
