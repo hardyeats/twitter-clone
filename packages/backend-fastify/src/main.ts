@@ -1,7 +1,7 @@
 import Fastify from "fastify";
 import routes from "./routes";
-console.log("hello world");
-const server = Fastify();
+
+const server = Fastify({ logger: true });
 server.get("/ping", async () => {
   return "pong";
 });
