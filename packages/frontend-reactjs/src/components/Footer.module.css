@@ -10,24 +10,32 @@ footer {
   background: var(--primary-color);
 }
 
-.footer button {
+.buttons {
   font-size: var(--font-size6);
   font-weight: bold;
-  height: 70%;
+  height: 65%;
   width: 45%;
   border: 1px solid var(--color-gray2);
   border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
-.footer button.loginButton {
+.loginButton {
   color: white;
   background: var(--primary-color);
 }
-.footer button.loginButton:hover {
+.loginButton:hover {
   background: var(--primary-color2);
 }
 
-.footer button.registerButton:hover {
+.registerButton {
+  color: black;
+  background: var(--color-gray2);
+}
+.registerButton:hover {
   background: var(--color-gray4);
   border-color: var(--color-gray4);
 }
