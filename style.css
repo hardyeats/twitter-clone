@@ -1,0 +1,82 @@
+:root {
+  --primary-color: #1d9bf0;
+  --primary-light-color: #e6f3fc;
+  --gray-color: #eff3f4;
+  --font-size1: 2rem;
+  --font-size2: 1.75rem;
+  --font-size3: 1.5rem;
+  --font-size4: 1.25rem;
+  --font-size5: 1.125rem;
+  --font-size6: 1rem;
+  --font-size7: 0.75rem;
+}
+
+body {
+  display: flex;
+  margin: 0;
+}
+
+header {
+  font-size: var(--font-size1);
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  list-style: none;
+  margin: var(--font-size7);
+  padding: 5px 10px;
+  border-radius: 100%;
+}
+
+header ul li:hover {
+  background: var(--gray-color);
+}
+
+header ul li.brand-icon {
+  color: var(--primary-color);
+}
+
+header ul li.brand-icon:hover {
+  background: var(--primary-light-color);
+}
+
+header ul li i {
+  font-size: var(--font-size2);
+}
+
+main {
+  width: 100%;
+  border-left: 1px solid var(--gray-color);
+}
+
+main label.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+
+main .search .search-icon {
+  position: absolute;
+  padding: var(--font-size2);
+  color: gray;
+}
+
+main .search input {
+  background: var(--gray-color);
+  border-radius: 2rem;
+  border: none;
+  padding: 0.75em;
+  padding-left: 4rem;
+  font-size: var(--font-size6);
+  width: 100%;
+}
+
+main .search input:focus {
+  background: white;
+  border-color: var(--primary-color);
+}
