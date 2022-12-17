@@ -1,14 +1,13 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import Main from "./Main";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SearchPage />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
