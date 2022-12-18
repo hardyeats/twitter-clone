@@ -1,5 +1,5 @@
 import { FastifyPluginAsync } from "fastify";
-import authRoute from "./auth";
+import authRoute from "./auth/index.js";
 
 const api: FastifyPluginAsync = async (fastify) => {
   fastify.get("/", () => {

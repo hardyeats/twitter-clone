@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import HTTP from "../lib/HTTP";
 import styles from "./SignupModal.module.css";
 
 const SignupModal = () => {
@@ -8,9 +9,7 @@ const SignupModal = () => {
   useEffect(() => {
     window.google.accounts.id.initialize({
       client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
-      callback: (response: any) => {
-        console.log("Encoded JWT ID token: ", response);
-      },
+      callback: HTTP.sendGoogleIdTOken,
     });
     window.google.accounts.id.renderButton(
       document.getElementById("googleLoginBtn"),

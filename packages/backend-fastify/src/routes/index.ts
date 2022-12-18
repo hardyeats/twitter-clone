@@ -1,5 +1,5 @@
 import fastify, { FastifyPluginAsync } from "fastify";
-import api from "./api";
+import api from "./api/index.js";
 
 const routes: FastifyPluginAsync = async (fastify) => {
   fastify.get("/", () => {

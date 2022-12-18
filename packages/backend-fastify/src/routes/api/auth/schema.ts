@@ -5,3 +5,12 @@ export const registerSchema = {
     .prop("username", S.string().required())
     .prop("password", S.string().required()),
 };
+
+export const registerGoogleSchema = {
+  body: S.object().prop("credential", S.string().required()),
+};
+
+export const registerGoogleBodySchema = S.object().prop(
+  "credential",
+  S.string().required()
+);
