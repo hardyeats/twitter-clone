@@ -1,0 +1,31 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  background: white;
+
+  padding-top: var(--font-size4);
+  padding-left: var(--font-size4);
+  padding-right: var(--font-size4);
+}
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 75%;
+    height: 60%;
+    border-radius: 2rem;
+  }
+}
