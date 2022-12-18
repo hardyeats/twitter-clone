@@ -6,10 +6,13 @@ const SignupModal = () => {
     <div className={styles.modalBackground}>
       <div className={styles.modal}>
         <div className={styles.modalHeader}>
-          <div className={styles.modalHeaderLest} onClick={() => navigate(-1)}>
+          <div className={styles.modalHeaderLeft} onClick={() => navigate(-1)}>
             X
           </div>
-          <div className={styles.modalHeaderCenter}>center</div>
+          <div className={styles.modalHeaderCenter}>
+            {" "}
+            <i className="fa-brands fa-twitter"></i>
+          </div>
           <div className={styles.modalHeaderRight}></div>
         </div>
       </div>
