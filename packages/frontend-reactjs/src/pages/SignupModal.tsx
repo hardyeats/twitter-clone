@@ -7,10 +7,9 @@ const SignupModal = () => {
       <div className={styles.modal}>
         <div className={styles.modalHeader}>
           <div className={styles.modalHeaderLeft} onClick={() => navigate(-1)}>
-            X
+            <i className="fa-solid fa-x"></i>
           </div>
           <div className={styles.modalHeaderCenter}>
-            {" "}
             <i className="fa-brands fa-twitter"></i>
           </div>
           <div className={styles.modalHeaderRight}></div>

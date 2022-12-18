@@ -25,14 +25,15 @@
 .modalHeaderLeft {
   cursor: pointer;
   padding: 5px 10px;
+  border-radius: 100%;
 }
 .modalHeaderLeft:hover {
   background-color: var(--gray-color);
 }
 
 .modalHeaderCenter {
-  color: var(--primary-color);
   font-size: var(--font-size2);
+  color: var(--primary-color);
 }
 
 @media (min-width: 768px) {
