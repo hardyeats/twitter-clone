@@ -1,7 +1,23 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./SignupModal.module.css";
+
 const SignupModal = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.google.accounts.id.initialize({
+      client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+      callback: (response: any) => {
+        console.log("Encoded JWT ID token: ", response);
+      },
+    });
+    window.google.accounts.id.renderButton(
+      document.getElementById("googleLoginBtn"),
+      { theme: "outline", size: "large", width: "320", shape: "circle" }
+    );
+  }, []);
+
   return (
     <div className={styles.modalBackground}>
       <div className={styles.modal}>
@@ -16,7 +32,7 @@ const SignupModal = () => {
         </div>
         <div className={styles.modalBody}>
           <p>지금 트위터에 가입하세요.</p>
-          <p>구글 로그인</p>
+          <div id="googleLoginBtn" className={styles.googleLoginBtn}></div>
           <p>애플 로그인</p>
           <p>-----------또는-----------</p>
           <p>휴대폰 번호나 이메일 주소로 가입하기</p>

@@ -36,6 +36,19 @@
   color: var(--primary-color);
 }
 
+.modalHeaderRight {
+  padding: 10px;
+}
+
+.modalBody {
+  text-align: center;
+}
+
+.googleLoginBtn div {
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .modal {
     width: 75%;
