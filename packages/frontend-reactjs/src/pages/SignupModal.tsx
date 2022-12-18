@@ -9,7 +9,7 @@ const SignupModal = () => {
   useEffect(() => {
     window.google.accounts.id.initialize({
       client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
-      callback: HTTP.sendGoogleIdTOken,
+      callback: HTTP.sendGoogleIdToken,
     });
     window.google.accounts.id.renderButton(
       document.getElementById("googleLoginBtn"),

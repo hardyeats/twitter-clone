@@ -13,9 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/cors": "^8.2.0",
+    "@fastify/type-provider-typebox": "^2.4.0",
     "@prisma/client": "^4.7.1",
-    "fastify": "^4.10.2",
-    "fluent-json-schema": "^4.0.0"
+    "@sinclair/typebox": "^0.25.13",
+    "fastify": "^4.10.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",

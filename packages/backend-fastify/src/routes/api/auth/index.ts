@@ -1,6 +1,6 @@
 import { FastifyPluginAsync } from "fastify";
 import UsersService from "../../../services/users.service.js";
-import { registerGoogleSchema, registerSchema } from "./schema.js";
+import { RegisterGoogle, RegisterGoogleType } from "./schema.js";
 
 const authRoute: FastifyPluginAsync = async (fastify) => {
   const usersService = UsersService.getInstance();
@@ -9,18 +9,20 @@ const authRoute: FastifyPluginAsync = async (fastify) => {
     return "auth root route";
   });
 
-  fastify.post("/register", { schema: registerSchema }, () => {
-    return "auth register route";
-  });
-
   fastify.post<{
-    Body: {
-      credential: string;
-    };
-  }>("/register/google", { schema: registerGoogleSchema }, (request) => {
-    const { credential } = request.body;
-    console.log(credential);
-    return "auth register google route";
-  });
+    Body: RegisterGoogleType;
+  }>(
+    "/register/google",
+    {
+      schema: {
+        body: RegisterGoogle,
+      },
+    },
+    (request) => {
+      const { credential } = request.body;
+      console.log(credential);
+      return "auth register google route";
+    }
+  );
 };
 export default authRoute;
