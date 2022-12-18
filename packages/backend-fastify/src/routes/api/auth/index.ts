@@ -12,16 +12,15 @@ const authRoute: FastifyPluginAsync = async (fastify) => {
   fastify.post<{
     Body: RegisterGoogleType;
   }>(
-    "/register/google",
+    "/google",
     {
       schema: {
         body: RegisterGoogle,
       },
     },
-    (request) => {
+    async (request) => {
       const { credential } = request.body;
-      console.log(credential);
-      return "auth register google route";
+      return await usersService.LoginOrRegisterByGoogle(credential);
     }
   );
 };

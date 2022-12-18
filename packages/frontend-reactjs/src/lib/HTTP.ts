@@ -8,7 +8,7 @@ const HTTP = {
   sendGoogleIdToken: async (gar: GoogleAccountResponse) => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_SERVER_URL}/api/auth/register/google`,
+        `${process.env.REACT_APP_API_SERVER_URL}/api/auth/google`,
         {
           method: "POST",
           headers: {
